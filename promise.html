@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const texts = ["Hello, World!", "Welcome to my site!", "Enjoy your stay!", "Have a great day!"];
+    let index = 0;
+
+    setInterval(() => {
+        index = (index + 1) % texts.length;
+        document.getElementById('text').textContent = texts[index];
+    }, 3000);
+});
+    </script>
+</head>
+<body>
+    <div id="text">Hello, World!</div>
+</body>
+</html>
