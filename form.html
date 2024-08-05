@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+
+    <script>
+
+  document.addEventListener('DOMContentLoaded', function() {      
+  document.getElementById('myForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const formObject = {};
+
+    formData.forEach((value, key) => {
+        formObject[key] = value;
+    });
+
+    console.log(JSON.stringify(formObject));
+});
+});       
+    </script>
+</head>
+<body>
+  <div id="block" style="border: 1px solid black; border-radius: 4px; padding: 10px 10px;">
+    <h2 style="text-align: center; color: blueviolet;">Registeration Form</h2>
+  <form id="myForm" style="text-align: center;">
+    <label for="name">Name:</label>
+    <input type="text"  name="name" placeholder="Enter your Name"><br><br>
+    
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Enter your Email"><br><br>
+    
+    <label for="phoneno">Contact No:</label>
+    <input type="number" id="" name="phoneno" placeholder="Enter Contact no"><br><br>
+
+    <label for="address">Address:</label>
+    <input type="text" id="" name="address" placeholder="Enter address"><br><br>
+
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" placeholder="Enter your age"><br><br>
+    
+    <input type="submit" id="btn" value="Submit">
+</form>
+</div>
+</body>
+</html>
